@@ -3,12 +3,10 @@ $gutter: 16px;
 $sm-columns: 4;
 $sm-margin: 0;
 
-$md-breakpoint: 768px;
 $md-columns: 8;
 $md-margin: 16px;
 $md-max-container: 960px + $md-margin * 2;
 
-$lg-breakpoint: 1280px;
 $lg-columns: 12;
 $lg-unit: 80px;
 $lg-gutter: 24px;
@@ -34,7 +32,7 @@ $lg-max-container: ($lg-unit + $lg-gutter) * $lg-columns;
     }
   }
 
-  @media screen and (min-width: $md-breakpoint) {
+  @include responsive(T) {
     max-width: $md-max-container;
     padding: 0 $md-margin;
 
@@ -45,7 +43,7 @@ $lg-max-container: ($lg-unit + $lg-gutter) * $lg-columns;
     }
   }
 
-  @media screen and (min-width: $lg-breakpoint) {
+  @include responsive(D) {
     max-width: $lg-max-container;
     padding: 0;
 
