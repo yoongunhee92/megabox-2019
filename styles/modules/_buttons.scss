@@ -1,0 +1,82 @@
+%btn-base {
+  @include inline-flexbox;
+  padding: 0 8px;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+.btn-primary {
+  @extend %btn-base;
+  color: $white;
+  background-color: $purple;
+  border: 1px solid $purple-light;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: $purple-light;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-base;
+  color: $gray-5;
+  background-color: $background-gray;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: $border;
+  }
+}
+
+.btn-outlined {
+  @extend %btn-base;
+  color: $purple;
+  background-color: $white;
+  border: 1px solid $purple;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    color: $white;
+    background-color: $purple-light;
+  }
+}
+
+.btn-ghost {
+  @extend %btn-base;
+  color: $gray-7;
+  background-color: transparent;
+  border: 1px solid $border;
+  transition: color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    color: $border;
+  }
+}
+
+.btn-29 {
+  @include text-style(13);
+  height: 29px;
+}
+
+.btn-34 {
+  @include text-style(14);
+  height: 34px;
+}
+
+.btn-39 {
+  @include text-style(12);
+  height: 39px;
+}
+
+.btn-48 {
+  @include text-style(20);
+  height: 48px;
+}
+
+.btn-57 {
+  @include text-style(18);
+  height: 57px;
+}
