@@ -1,0 +1,30 @@
+.gnb {
+  &-wrapper {
+    @include flexbox(between);
+    height: 32px;
+  }
+
+  &-icon-button {
+    @include flexbox;
+
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+  }
+
+  &-menu-button {
+    color: $purple;
+  }
+
+  .logo {
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 16px;
+    }
+  }
+}
