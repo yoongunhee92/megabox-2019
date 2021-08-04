@@ -1,0 +1,28 @@
+.gnb-nav {
+  &-list {
+    @include flexbox(start);
+  }
+
+  &-item {
+    @include text-style(16, $gray-5);
+    margin-right: 50px;
+    font-weight: 700;
+    transition: color 200ms ease-in-out;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $purple;
+    }
+
+    a {
+      padding: 10px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

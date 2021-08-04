@@ -1,4 +1,6 @@
 .gnb {
+  border-bottom: 1px solid $border;
+
   &-wrapper {
     @include flexbox(between);
     height: 32px;
@@ -6,17 +8,17 @@
 
   &-icon-button {
     @include flexbox;
-
-    width: 16px;
-    height: 16px;
-    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
   }
 
   &-menu-button {
     color: $purple;
   }
 
-  .logo {
+  .logo,
+  .logo-sub {
     a {
       display: block;
     }
@@ -24,7 +26,61 @@
     img {
       display: block;
       width: auto;
-      height: 16px;
+      height: 20px;
+    }
+  }
+
+  @include responsive(T) {
+    &-wrapper {
+      height: 68px;
+    }
+
+    &-left {
+      position: relative;
+      width: 100%;
+
+      .logo {
+        @include pos-center;
+
+        img {
+          height: 30px;
+        }
+
+        &-sub {
+          @include pos-center-y;
+          left: 0;
+
+          img {
+            height: 15px;
+          }
+        }
+      }
+    }
+
+    &-right {
+      position: relative;
+    }
+
+    &-menu-button {
+      @include pos-center-y;
+      right: 0;
+    }
+  }
+
+  @include responsive(D) {
+    &-left {
+      @include flexbox(start);
+      width: auto;
+
+      .logo,
+      .logo-sub {
+        position: static;
+        transform: none;
+      }
+
+      .logo {
+        margin-right: 15px;
+      }
     }
   }
 }
