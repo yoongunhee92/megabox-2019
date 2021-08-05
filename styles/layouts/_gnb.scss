@@ -1,4 +1,6 @@
 .gnb {
+  $padding: 7px;
+
   border-bottom: 1px solid $border;
 
   &-wrapper {
@@ -6,10 +8,15 @@
     height: 32px;
   }
 
+  &-left {
+    margin-left: -#{$padding};
+  }
+
   .logo,
   .logo-sub {
     a {
       display: block;
+      padding: $padding;
     }
 
     img {
@@ -27,6 +34,7 @@
     &-left {
       position: relative;
       width: 100%;
+      margin-left: 0;
 
       .logo {
         @include pos-center;
@@ -37,7 +45,7 @@
 
         &-sub {
           @include pos-center-y;
-          left: 0;
+          left: 0 - ($padding);
 
           img {
             height: 15px;
@@ -62,6 +70,7 @@
     &-left {
       @include flexbox(start);
       width: auto;
+      margin-left: -#{$padding};
 
       .logo,
       .logo-sub {
@@ -70,7 +79,7 @@
       }
 
       .logo {
-        margin-right: 15px;
+        margin-right: 15px - ($padding * 2);
       }
     }
   }
