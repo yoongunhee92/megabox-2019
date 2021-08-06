@@ -1,14 +1,12 @@
 .gnb-nav {
-  $padding: 10px;
-
-  margin-right: -#{$padding};
+  border-left: 1px solid $border;
 
   &-list {
     @include flexbox(start);
   }
 
   &-item {
-    margin-right: 70px - ($padding * 2);
+    border-right: 1px solid $border;
 
     &.is-active,
     &:hover {
@@ -17,14 +15,10 @@
       }
     }
 
-    &:last-child {
-      margin-right: 0;
-    }
-
     a {
       @include text-style(16, $secondary);
       display: block;
-      padding: $padding;
+      padding: 22px 30px;
       font-weight: 700;
       transition: color 200ms ease-in-out;
     }
