@@ -1,11 +1,15 @@
 const mainCarousel = tns({
   container: '.main-carousel .slider-list',
-  controls: false,
+  controls: true,
+  prevButton: '.main-carousel .controls-arrow.is-prev',
+  nextButton: '.main-carousel .controls-arrow.is-next',
   navContainer: '.main-carousel .nav-list',
   arrowKeys: true,
   autoplay: true,
+  autoplayText: ['▶', '❚❚'],
   autoplayHoverPause: true,
-  autoplayButtonOutput: false,
+  autoplayButton: '.main-carousel .autoplay-button',
+  autoplayButtonOutput: true,
   mouseDrag: true,
   preventScrollOnTouch: true,
 })
