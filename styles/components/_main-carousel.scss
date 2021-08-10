@@ -1,5 +1,7 @@
 .main-carousel {
   position: relative;
+  top: 0;
+  z-index: $main-carousel-level;
 
   &-slider {
     figure {

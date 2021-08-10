@@ -1,0 +1,9 @@
+.main-banner {
+  position: relative;
+
+  &-menu {
+    position: absolute;
+    top: 0;
+    z-index: $main-banner-menu-level;
+  }
+}
