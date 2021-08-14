@@ -1,9 +1,25 @@
 .main-banner {
+  $gird-padding: 8px;
+
   position: relative;
 
   &-menu {
     position: absolute;
-    top: 0;
+    top: 125px;
+    left: 24px - $gird-padding;
     z-index: $main-banner-menu-level;
+
+    &-right {
+      .button-group {
+        a {
+          width: 78px;
+          margin-right: 2px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,37 @@
+.main-carousel {
+  // $gird-padding: 8px;
+
+  &-content {
+    position: relative;
+  }
+
+  &-text {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: $main-carousel-text-level;
+    color: $white;
+
+    h3,
+    h4,
+    p {
+      font-weight: 400;
+    }
+
+    h3 {
+      @include text-style(24);
+      margin-bottom: 5px;
+    }
+
+    h4,
+    p {
+      @include text-style(12);
+    }
+
+    h4 {
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid $border;
+    }
+  }
+}

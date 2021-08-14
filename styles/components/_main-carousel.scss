@@ -74,8 +74,8 @@
 
   &-autoplay {
     @include pos-center-x;
-    bottom: 12px;
-    margin-left: 50px;
+    bottom: 13px;
+    margin-left: 57px;
 
     .autoplay-button {
       font-size: 11px;
@@ -122,6 +122,7 @@
     &-slider {
       figure {
         img {
+          width: 100%;
           height: auto;
           min-height: 425px;
         }
